@@ -17,7 +17,6 @@ permissions:
 
 # Daftar pekerjaan yang dijalankan
 jobs:
-
   # Pekerjaan pertama: membangun APK
   build:
     name: Build Flutter APK
@@ -30,7 +29,6 @@ jobs:
       version: ${{ steps.get_version.outputs.version }}
 
     steps:
-
       # Mengambil source code dari repository
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -114,7 +112,6 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
 
     steps:
-
       # Mengambil source code
       - name: Checkout Repository
         uses: actions/checkout@v4
